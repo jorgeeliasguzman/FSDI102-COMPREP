@@ -1,0 +1,303 @@
+/*global*/
+:root{
+    --primary: #f1bb0a;
+}
+html{
+    font-size: 62.5%;/*reset the html 1 rem=10px*/
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'lato', sans-serif;
+    background-color: black;
+}
+img{
+    max-width: 100%;
+}
+p{
+    font-size: 1.6rem;
+}
+/*utilities*/
+.login{
+    font-weight: 700;
+}
+.header-container{
+    margin: 0 auto;
+}
+.upper-text{
+    font-size: 1.4rem;;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+/*menu
+
+.icons p{
+    font-size: 2rem;
+    padding: 0 2rem;
+}
+*/
+nav.menu{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    height: 5rem;
+    vertical-align: middle;
+}
+.fas-search{
+    border: 10px;
+}
+.logo-desktop{
+    display: none;
+}
+.logo-mobile{
+    height: 3rem;
+    margin-left: 1.5rem;
+    display: block;
+}
+.icons{
+    display: flex;
+    justify-content: space-around;
+    flex-basis: 40%;
+}
+.hide{
+    display: none;
+}
+@media(min-width:768px){
+    .logo-desktop{
+        height: 3rem;
+        margin-left: 1.5rem;
+        display: block;
+    }
+    .hide{
+        display: block;
+    }
+    .logo-mobile{
+        display: none;
+    }
+    .icons{
+        flex-basis: 22%;
+    }
+    .renew{
+        border-bottom: 3px solid var(--primary);
+        background-size: 50% 200%;
+        background-image: linear-gradient(to bottom, #fff 50%, var(-primary-)50%);
+        transition: background-position .2s ease-in-out, color .2s ease-in-out;
+        padding: 1rem;
+        cursor: pointer;
+    }
+    .renew:hover{
+        background-position: 0 100%;
+        background-color: var(--primary);
+    }
+}
+/*    align-items: center;*/
+.icons i{
+    font-size: 1.6rem;
+}
+.subscribe{
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    background-image: linear-gradient(to left, black 50%, var(--primary) 50%);
+    transition: background-position .2s ease-in-out, color .2s ease-in-out;
+    color: white;
+    padding: 1rem;
+    cursor: pointer;
+}
+.subscribe:hover{
+    background-position: 0% 0;
+    color: black;
+}
+
+/*header*/
+header.site-header{
+    background-color: black;
+    text-align: center;
+
+}
+.site-header h1{
+    font-size: 4rem;
+    overflow-wrap: break-word;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: .4rem;
+    padding-top: 4rem;
+
+}
+.site-header .title-description{
+    color: white;
+    font-size: 1.6rem;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 2rem;
+}
+span .sub-text{
+    border-bottom: 0.2rem solid var(--primary);
+}
+span .sub-text:hover{
+    background-color: var(--primary);
+    color: black;
+    cursor: pointer;
+}
+@media(min-width:768px){
+    .header-container{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+    .news{
+        flex-basis: 60%;
+    }
+}
+.line{
+    display: block;
+    width: 4%;
+    margin: 1rem auto 3rem auto;
+    border-bottom: 4px solid var(--primary);
+}
+/*news*/
+news{
+    display: flex;
+}
+.main-news{
+    height: 45rem;
+    width: 45rem;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url(img/img-chimp.png);
+    background-position: bottom center;
+    background-size: cover;
+    display: block;
+}
+.main-news-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 90%;
+    text-align: left;
+    padding: 1rem;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    columns: white;
+}
+.main-news-text h2{
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: .2rem  ;
+    font-size: 1.2rem;
+}
+.main-news-text .title{
+    font-size: 4rem;
+    font-weight: bold;
+}
+.main-news .read-text{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    color: white;
+}
+
+/*Secondary-news*/
+.secondary-news-container{
+    display: grid;
+}
+.secondary-news{
+    height:45rem;
+    width: 45rem;
+    margin: 2rem auto;
+}
+.secondary-news-text{
+    margin-top: -3px;
+    width:44rem;
+    background-color: white;
+    border-color: 1px solid black;
+    text-align: left;
+    padding-left: 1rem;
+}
+.secondary-news img:hover{
+    border-radius: .5rem solid  var(--primary);
+}
+.secondary-news-text h2{
+    color: gray;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+.secondary-news-text p{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+.secondary-news-text .read-text{
+color: black;
+font-size: 1.2rem;
+text-transform: uppercase;
+letter-spacing: 3px;
+}
+@media(min-width:768px){
+    .main-news{
+        width: 70rem;
+        height: 42rem;
+    }
+    .secondary-news{
+        width: 25rem;
+    }
+    .secondary-news-text{
+        width: 24rem;
+    }
+    .secondary-news-container{
+        display: flex;
+    }
+}
+.picks{
+    display: flow-root;
+}
+#pick-header{
+    color: white;
+    padding-left: 1rem;
+    padding-top: 0;
+    border-left: .5rem solid var(--primary);
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 2rem;
+    display: block;
+    width: 86%;
+    text-align: left;
+    margin-left: 3rem;
+    margin-right: auto;
+}
+.picks-text{
+    display: flexbox;
+    flex-direction: column;
+    color: white;
+}
+.picks-element{
+    display: flex;
+    flex-direction: row;
+    width: 86%;
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+.picks-element img{
+    width: 9rem;
+    height: 9rem;
+}
+.picks-element p,h2{
+    display:block;
+    float: none;
+    padding: 1px;
+    color:white;
+    font-weight: 700;
+    margin-left: 3rem;
+}
